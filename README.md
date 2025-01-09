@@ -1,5 +1,7 @@
 # dsa-js
 
-## install tsx to compile and run typescript files
-
+## use node 23
+or 
 `npm install -g tsx`
+
+node src/binary-search.ts
