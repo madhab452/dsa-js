@@ -1,4 +1,4 @@
-import { FromArray, ListNode, Print } from "../common/linkedlist/linkedlist";
+import { FromArray, ListNode, Print } from "../../common/linkedlist/linkedlist";
 
 
 function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {

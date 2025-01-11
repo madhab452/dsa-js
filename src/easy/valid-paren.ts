@@ -1,4 +1,4 @@
-import { Stack } from "../common/stack/stack";
+import { Stack } from "../../common/stack/stack";
 
 function isValid(s: string): boolean {
     let st = new Stack()

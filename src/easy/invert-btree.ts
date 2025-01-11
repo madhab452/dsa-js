@@ -1,4 +1,4 @@
-import { TreeNode } from "../common/btree/btree";
+import { TreeNode } from "../../common/btree/btree";
 function invertTree(root: TreeNode | null): TreeNode | null {
     if (root == null) {
         return null
