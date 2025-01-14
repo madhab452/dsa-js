@@ -1,23 +1,24 @@
 function lengthOfLongestSubstring(s: string): number {
-    var xmap: Map<string, number> = new Map()   
-    let i = 0, j = 1, max = Number.MIN_SAFE_INTEGER;
-    if (s.length == 1) {
-        return 1
-    }
-    while (j < s.length){
-        let jthIdex = xmap.get(s[j])
-        if (jthIdex == undefined) {
-            max = Math.max(j-i)
-            j++
-        } else {
-            i = j
+    const xmap: Map<string, number> = new Map();
+    let i = 0, max = 0;
+
+    for (let j = 0; j < s.length; j++) {
+        if (xmap.has(s[j])) {
+            i = Math.max(xmap.get(s[j])! + 1, i);
         }
-        xmap.set(s[j], j)
-        j++
+        max = Math.max(max, j - i + 1);
+
+        xmap.set(s[j], j);
     }
 
-    return max 
-};
+    return max;
+}
 
 
-console.log(lengthOfLongestSubstring("bbbb")) 
+
+// console.log(lengthOfLongestSubstring("bbbbed"))
+// console.log(lengthOfLongestSubstring("pwwkew"))
+// console.log(lengthOfLongestSubstring("abcabcbb"))
+// console.log(lengthOfLongestSubstring("abc"))
+// console.log(lengthOfLongestSubstring("dvdf"))
+// console.log(lengthOfLongestSubstring("tmmzuxt"))
